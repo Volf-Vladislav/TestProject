@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/default}">
+<head>
+    <title th:text="${section}"></title>
+</head>
+<body>
+    <div layout:fragment="content">
+        <div class="container">
+            <div class="row">
+                <img src = "https://pp.userapi.com/c812/g20782350/a_5e733f5a.jpg?ava=1" width="300" height="300" alt = "">
+                <img src = "https://mtdata.ru/u24/photo709D/20155891378-0/original.jpg#20155891378" width="300" height="300" alt = "">
+                <div class="col-sm" th:each="n : ${news}">
+                    <p th:text="${n.title}"></p>
+                    <pre th:text="${n.text}"></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
